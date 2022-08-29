@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projet freelance portfolio collectif</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referre">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css" />
+        
+        <style>
+            
+        </style>
+
+    </head>
+        
+    <body>
+         <!--toutes mes excuses j'ai été pris par le temps pour organiser définitivement mes 
+        fichiers donc pour visualiser le template tu dois ouvrir le fichier index.html et le 
+        fichier portfolioVersion2.html est un clone du ficher index.html c'est une sécurité-->
+        <!--header-->
+        <!--j'ai été pris par le temps je n'ai pas eu le temps de résoudre le bouton
+        hamburger qui au click ouvre une nav sur le format mobile  : le bouton
+        apparaît en filigramme il est à peine visible seul le bord est visible
+        je suis capable de le résoudre mais il fallait un temps pour livrer
+        je vais retravailler de mon côté le responsive car les blocs ne se centrent pas 
+        tout le temps quelque soit la taille de l'écran
+        -->
+        <!--pour le footer je n'ai pas eu le temps de changer la couleur des icons
+        sociaux en bleu pour passer en version mobile-->
+        <header>
+            <nav class="nav__bar navbar navbar-expand-sm">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img class="image" src="image/logo.png" alt="logo freeweb agence"/></a>
+                    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav text-lg-center mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link me-lg-5 me-md-1 display-md-6 text-white fw-bold" href="#aPropos">A propos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-lg-5 me-md-1 text-white display-md-6 fw-bold" href="#team">Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-lg-5 me-md-1 text-white display-md-6 fw-bold" href="#projet">Réalisations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-lg-5 me-md-1 text-white display-md-6 fw-bold" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--<div class="d-sm-block">
+                    <a href="#"><img class="image" src="image/phone.png" alt="phone to contact"/></a>
+                </div>-->
+            </nav>
+        </header>
+
+        <!--section à propos slider-->
+        <section id="aPropos">
+            <div class="slide-block">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-nav left">
+                        <i id="btn-left" class="fa-solid fa-arrow-left-long"></i>
+                    </div>
+                    <div class="slide">
+                        <!--class active on the image when we begin with-->
+                        <img class="active slider" src="image/dev2.jpg" alt="image silder project IT">
+                        <img class="slider" src="image/dev4.jpg" alt="image silder project IT">
+                        <img class="slider" src="image/dev5.jpg" alt="image silder project IT">
+                        <img class="slider" src="image/dev6.jpg" alt="image silder project IT">
+                    </div>
+                    <div class="btn-nav right">
+                        <i id="btn-right" class="fa-solid fa-arrow-right-long"></i>
+                    </div>
+                </div>
+                <div class="block-radio d-flex justify-content-center">
+                    <input class="radio me-3" type="radio" name="radio-btn" id="radio1">
+                    <input class="radio me-3" type="radio" name="radio-btn" id="radio2">
+                    <input class="radio me-3" type="radio" name="radio-btn" id="radio3">
+                    <input class="radio me-3" type="radio" name="radio-btn" id="radio4">
+                </div>
+            </div>
+        </section>
+
+        <!---section team-->
+        <section id="team" class="team mt-5">
+            <h1 class="mt-5 text-center">Team</h1>
+            <div class="container d-flex justify-content-center mx-auto">
+                <div class="card mt-3 d-flex justify-content-center align-items-center mx-auto" style="width:450px;height:600px">
+                    <img class="card-img-top" src="image/photo1.jpg" alt="dev man">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">John Doe</h4>
+                        <p class="lead card-text text-center">Expert in SEO</p>
+                        <p class="mute card-text text-center">"Soyez sur la première page de votre naviguateur"</p>
+                        <ul>
+                            <li>Expert dans beaucoup de technomogies</li>
+                            <li>Un partenaire à votre écoute</li>
+                            <li>Racontez nous votre histoire</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mt-3 d-flex justify-content-center align-items-center mx-auto" style="width:450px;height:600px" >
+                    <img class="card-img-top" src="image/photo2.jpg" alt="dev man" data-aos="zoom-out-up">
+                    <div class="card-body" data-aos="zoom-out-up">
+                        <h4 class="card-title text-center">Mr Smith</h4>
+                        <p class="lead card-text text-center">Expert in Ux</p>
+                        <p class="mute card-text">"Créez une interface qui suit vos utilisateurs"</p>
+                    </div>
+                    <div class="card-action">
+                        <button class="btn btn-info mb-5"  data-bs-toggle="modal" data-bs-target="#myModalSkill2">See profile</button>
+                    </div>
+                    <div class="modal fade" id="myModalSkill2">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h2 class="text-dark">Mes compétences</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body text-dark">
+                                    <p>Story telling</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-striped bg-danger" role="progressbar" aria-label="Warning striped example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                                    </div>
+                                    <p class="mt-5">Figma, adobe xd, photoshop</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-label="Danger striped example" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                    </div>
+                                    <p class="mt-5">HTML CSS</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Info striped example" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                    </div>
+                                    <p class="mt-5">JS</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Success striped example" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                                    </div>
+                                    <p class="mt-5">VUE, ANGULAR, REACT</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Default striped example" style="width: 60%" aria-valuenow="60" aria-valuemin="60" aria-valuemax="100">60%</div>
+                                    </div>
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container d-flex justify-content-center mx-auto">
+                <div class="card mt-3 d-flex justify-content-center align-items-center mx-auto" style="width:450px;height:600px">
+                    <img class="card-img-top" src="image/photo3.jpg" alt="dev man" data-aos="zoom-out-up">
+                    <div class="card-body" data-aos="zoom-out-up">
+                        <h4 class="card-title text-center">John Doe</h4>
+                        <p class="lead card-text text-center">Expert in design</p>
+                        <p class="mute card-text text-center">"Créons une interface puissante qui vous ressemble"</p>
+                        <p>Repoussons les limites au delà du possible pour vous satisfaire</p>
+                    </div>
+                    <div class="card-action ">
+                        <button class="btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#myModalSkill3">See profile</button>
+                    </div>
+                    <div class="modal fade" id="myModalSkill3">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h2 class="text-dark">Mes compétences</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body text-dark">
+                                    <p>FIGMA</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-striped bg-danger" role="progressbar" aria-label="Warning striped example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                                    </div>
+                                    <p class="mt-5">ADOBE XD</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-label="Danger striped example" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                    </div>
+                                    <p class="mt-5">HTML5</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Info striped example" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                    </div>
+                                    <p class="mt-5">WORDPRESS</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Success striped example" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                                    </div>
+                                    <p class="mt-5">CSS SASS</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Default striped example" style="width: 60%" aria-valuenow="60" aria-valuemin="60" aria-valuemax="100">60%</div>
+                                    </div>
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-3 d-flex justify-content-center align-items-center mx-auto" style="width:450px;height:600px">
+                    <img class="card-img-top img-circle" src="image/photo4.jpg" alt="dev woman" data-aos="zoom-out-up">
+                    <div class="card-body" data-aos="zoom-out-up">
+                        <h4 class="card-title text-center">Jane Doe</h4>
+                        <p class="lead card-text text-center">Experte dans l'art de raconter votre histoire</p>
+                        <p class="mute card-text text-center">"Raconter votre propre conte dans notre outil"</p>
+                    </div>
+                    <div class="card-action">
+                        <button class="btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#myModalSkill4">See profile</button>
+                    </div>
+                    <div class="modal fade" id="myModalSkill4">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h2 class="text-dark">Mes compétences</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body text-dark">
+                                    <p>FIGMA, ADOBE XD</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-striped bg-danger" role="progressbar" aria-label="Warning striped example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                                    </div>
+                                    <p class="mt-5">CSS</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-label="Danger striped example" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                    </div>
+                                    <p class="mt-5">PHOTOSHOP, CANVAS</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Info striped example" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                    </div>
+                                    <p class="mt-5">HTML</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Success striped example" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                                    </div>
+                                    <p class="mt-5">GO JS CHARt JS THREE JS HIGHCHART JS</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Default striped example" style="width: 60%" aria-valuenow="60" aria-valuemin="60" aria-valuemax="100">60%</div>
+                                    </div>
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container d-flex justify-content-center mx-auto">
+                <div class="card mt-3 d-flex justify-content-center align-items-center mx-auto" style="width:450px;height:600px;">
+                    <img class="card-img-top" src="image/photo5.jpg" alt="dev woman" data-aos="zoom-out-up">
+                    <div class="card-body" data-aos="zoom-out-up">
+                        <h4 class="card-title text-center">Jane Doe</h4>
+                        <p class="lead card-text text-center">Experte dans le back end</p>
+                        <p class="mute card-text text-center">"transformer les informations pouur atteindre Mac 3"</p>
+                    </div>
+                    <div class="card-action">
+                        <button class="btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#myModalSkill5">See profile</button>
+                    </div>
+                    <div class="modal fade" id="myModalSkill5">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h2 class="text-dark">Mes compétences</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body text-dark">
+                                    <p>JAVA, PHP, NODE JS</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-striped bg-danger" role="progressbar" aria-label="Warning striped example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                                    </div>
+                                    <p class="mt-5">SQL, ORACLE</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-label="Danger striped example" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                    </div>
+                                    <p class="mt-5">REACT, VUE JS, ANGULAR</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Info striped example" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                    </div>
+                                    <p class="mt-5">MERISE</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Success striped example" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                                    </div>
+                                    <p class="mt-5">FIGMA</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Default striped example" style="width: 60%" aria-valuenow="60" aria-valuemin="60" aria-valuemax="100">60%</div>
+                                    </div>
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-3 d-flex justify-content-center align-items-center mx-auto" style="width:450px;height:600px">
+                    <img class="card-img-top" src="image/photo6.jpg" alt="dev man" data-aos="zoom-out-up" >
+                    <div class="card-body" data-aos="zoom-out-up">
+                        <h4 class="card-title text-center">Jane Doe</h4>
+                        <p class="lead card-text text-center">Expert en graphisme</p>
+                        <p class="mute card-text text-center">"Créons des sites qui utilisent d'impressionnantes technologies pour l'animation"</p>
+                        <p class="text-center">L'art du dessin est la meilleure façon de ravir les yeux de vos utilisateurs</p>
+                    </div>
+                    <div class="card-action">
+                        <button class="btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#myModalSkill6">See profile</button>
+                    </div>
+                    <div class="modal fade" id="myModalSkill6">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h2 class="text-dark">Mes compétences</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body text-dark">
+                                    <p>FIGMA ADOBE XD</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-striped bg-danger" role="progressbar" aria-label="Warning striped example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                                    </div>
+                                    <p class="mt-5">PHOTOSHOP AND MANY TOOLS OF PHOTO</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-label="Danger striped example" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                    </div>
+                                    <p class="mt-5">HTML CSS SASS SCSS</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Info striped example" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                    </div>
+                                    <p class="mt-5">WORDPRESS</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Success striped example" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                                    </div>
+                                    <p class="mt-5">PAINT AND MANY PROFESSIONNAL DRAWING TOOLS</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Default striped example" style="width: 60%" aria-valuenow="60" aria-valuemin="60" aria-valuemax="100">60%</div>
+                                    </div>
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projets">
+            <div class="container">
+                <h1 class="text-center mt-5 mb-5">TOUS NOS PROJETS</h1>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 mb-1 mx-auto">
+                        <!-- Bootstrap 5 card box -->
+                        <div class="card-box">
+                            <div class="card-thumbnail">
+                                <img src="image/projet1.jpg" class="img-fluid" alt="" data-aos="flip-left">
+                            </div>
+                            <h3><a href="#" class="mt-2 text-info">Un outil pour gérer votre temps</a></h3>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-6 col-lg-4 mb-1 mx-auto">
+                        <!-- Bootstrap 5 card box -->
+                        <div class="card-box">
+                            <div class="card-thumbnail">
+                                <img src="image/projet2.jpg" class="img-fluid" alt="" data-aos="flip-left">
+                            </div>
+                            <h3><a href="#" class="mt-2 text-info">Un outil pour gérer tous vos process</a></h3>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-6 col-lg-4 mx-auto">
+                        <!-- Bootstrap 5 card box -->
+                        <div class="card-box">
+                            <div class="card-thumbnail">
+                                <img src="image/projet3.jpg" class="img-fluid" alt="" data-aos="flip-left">
+                            </div>
+                            <h3><a href="#" class="mt-2 text-info">Un outil pour gérer vos équipes</a></h3>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-6 col-lg-4 mx-auto">
+                        <!-- Bootstrap 5 card box -->
+                        <div class="card-box">
+                            <div class="card-thumbnail">
+                                <img src="image/projet4.jpg" class="img-fluid" alt="" data-aos="flip-left">
+                            </div>
+                            <h3><a href="#" class="mt-2 text-info">Un outil pour gérer vos projets.</a></h3>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-6 col-lg-4 mx-auto">
+                        <!-- Bootstrap 5 card box -->
+                        <div class="card-box">
+                            <div class="card-thumbnail">
+                                <img src="image/projet5.jpg" class="img-fluid" alt="" data-aos="flip-left">
+                            </div>
+                            <h3><a href="#" class="mt-2 text-info">Un outil pour gérer le temps.</a></h3>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-6 col-lg-4 mx-auto">
+                        <!-- Bootstrap 5 card box -->
+                        <div class="card-box">
+                            <div class="card-thumbnail">
+                                <img src="image/projet6.jpg" class="img-fluid" alt="" data-aos="flip-left">
+                            </div>
+                            <h3><a href="#" class="mt-2 text-info">Un outil pour dessiner vos transports.</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--section formulaire-->
+        <section class="mt-5" id="contact">
+            <div  class="contact-parent position-relative mx-auto">
+                <div class="contact-enfant position-absolute">
+                    <button class="btn btn-danger btn-lg fw-bolder" data-bs-toggle="modal" data-bs-target="#form" >Inscription</button>
+                </div>
+            </div>
+            <div class="modal fade" id="form">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h2 class="text-dark">Mon formulaire</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="registration-form">
+                                <form class="text-white">
+                                    <fieldset>
+                                        <legend>Information pour la connexion</legend>
+                                        <div class="form-icon">
+                                            <span>
+                                                <i class="fa fa-user"></i>
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username" class="form-label">Username</label>
+                                            <input type="text" class="form-control item" id="username">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password" class="form-label">Mot de passe</label>
+                                            <input type="password" class="form-control item" id="password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email" class="form-label">Confirmar le mot de passe</label>
+                                            <input type="email" class="form-control item" id="email">
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>Information pour vous contacter</legend>
+                                        <div class="form-group">
+                                            <label for="birth-date" class="form-label">Date de naissance</label>
+                                            <input type="date" class="form-control item" id="birth-date">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone-number" class="form-label">Telephone
+                                                <input type="text" pattern="[0-9]{10}" class="form-control item" id="phone-number">
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="address" class="form-label">address</label>
+                                            <input type="text" class="form-control item" id="address">
+                                        </div>
+                                    </fieldset>
+                                    <div class="form-group">
+                                        <button action="submit" methods="post" class="btn btn-block create-account">
+                                            Create Account
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="mt-5 text-white">
+            <div class="row d-flex-lg justify-content-lg-between align-items-center mt-5">
+                <div class="col-lg-3 mx-auto text-center">
+                    <a class="navbar-brand" href="#"><img class="logoFooter" src="image/logo.png" alt="logo freeweb agence"/></a>
+                </div>
+                <div class="col-lg-6 mx-auto">
+                    <h2 class="text-center">Contactez-Nous</h2>
+                    <p class="text-center">Bld Frédéric Mistral</p>
+                    <p class="text-center">13150 BERRE L’ÉTANG</p>
+                    <p class="text-center display-5 fw-bolder">Contact.team@force2web.com</p>
+                    <div class="text-center pt-30">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"><img class="phoneFooter" src="image/phone.png" alt="phone to contact"/></a>
+                    </div> 
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title text-dark">Our phone</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body text-dark">
+                                    <p>06 09 03 06 09</p>
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-100 col-lg-3 mx-auto text-center">
+                    <a href="" class="me-4 text-white ">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="" class="me-4 text-white">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="" class="me-4 text-white">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="" class="me-4 text-white">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <div class="copyright">
+                    <p>Developed and maintained by <a href="#" target="_blank">Web2Force</a></p>
+                </div>
+            </div>
+        </footer>
+        <script src="slider.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            AOS.init({
+                easing: 'ease-out-back',
+                duration: 1000,
+                delay: 300,
+                once: true,
+                disable: 'mobile'
+            });
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projet freelance portfolio collectif</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            *, ::before, ::after {
+                margin : 0;
+                padding : 0;
+                box-sizing : border-box;
+            }
+            .slider {
+                    width : 250px;
+            }
+
+
+            .slide img {
+                max-width : 100%;
+                display : none;
+            }
+
+            img.active {
+                display : block;
+                animation : fade 0.8s;
+            }
+
+            @keyframes fade {
+                from {
+                    opacity : 0;
+                }
+                to {
+                    opacity : 1;
+                }
+            }
+
+           
+
+            /*.cont-btn {
+                width : 100%;
+                height : auto;
+                border : 1px solid black;
+                box-shadow : 0 10px 10px rgba(0, 0, 0, 0.3);
+                display : flex; /*enable to display the arrow on the same line
+                justify-content : center;/*enable to center the arrow in the center of the line
+            }*/
+
+            .btn-nav {
+                font-size : 50px;
+                margin : 0 15px;
+                cursor  : pointer;
+            }
+
+            .teal {
+                background-color : teal;
+            }
+
+        </style>
+    </head>
+        
+    <body>
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-nav left">
+                    <i id="btn-left" class="fa-solid fa-arrow-left-long"></i>
+                </div>
+                <div class="slide">
+                    <!--class active on the image when we begin with-->
+                    <img class="active slider" src="image/bear.jpeg">
+                    <img class="slider" src="image/health.jpeg">
+                    <img class="slider" src="image/bear.jpeg">
+                    <img class="slider" src="image/health.jpeg">
+                </div>
+                <div class="btn-nav right">
+                    <i id="btn-right" class="fa-solid fa-arrow-right-long"></i>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <input class="radio me-3" type="radio" name="radio-btn" id="radio1">
+                <input class="radio me-3" type="radio" name="radio-btn" id="radio2">
+                <input class="radio me-3" type="radio" name="radio-btn" id="radio3">
+                <input class="radio me-3" type="radio" name="radio-btn" id="radio4">
+            </div>
+
+
+        </div>
+        <script>
+            //fetch all the elements images in the dom and store them in one variable
+            //with type Array called items
+            const items = document.querySelectorAll(".slider");
+            //define a variable called nbSlide which contains the length of the array items
+            const nbSlide = items.length;
+            //fech in the dom the image rightArrow and store in a variable called next
+            const next = document.getElementById("btn-right");
+            //fech in the dom the image leftArrow and store in a variable called prev
+            const prev = document.getElementById("btn-left");
+            //create a variable count which stores the current index of the image
+            let count = 0;
+            //function which remove the class active on the current image so as to hide
+            //the current image in order to display the next image 
+            const slideNext = () => {
+                items[count].classList.remove("active");
+                //the condition enables to check if current index is inferior at the leghth
+                //of the array which contains the images so we increment by one the variable counter
+                //in other words we go to the next index of the image in the array
+                if(count < nbSlide - 1) {
+                    count++;
+                //if we are at the edge of the array we initialize again the counter to 0 so as 
+                //to go to the first image of the array
+                } else {
+                    count = 0;
+                }
+                //enable to make visible the image which follows the current image by adding 
+                //the class active.
+                items[count].classList.add("active");
+                radios[count].checked;
+                console.log(count);
+            }
+
+            //link a event to the button which enables by a click to display the next picture
+            next.addEventListener("click", slideNext);
+
+            //function which remove the class active on the current image so as to hide
+            //the current image in order to display the previous image which is just before the 
+            //the current image 
+            const radios = document.querySelectorAll(".radio");
+            const slidePrev = () => {
+                items[count].classList.remove("active");
+                //the condition enables to check if current index is superior at 0
+                //and if it is the case so we decrement by one the counter so we diplay 
+                //the image just before the current image
+                if(count > 0) {
+                    count--;
+                //if it is not the case we set the value of our variable to the last 
+                //index of our array of images. So if the current is the first of your array
+                //so go to the last image of your array of images
+                } else {
+                    count = nbSlide - 1;
+                }
+                items[count].classList.add("active");
+                radios[count].checked;
+            }
+
+            prev.addEventListener("click", slidePrev);
+
+            //a function which triggers an event we push the key
+            function keyPress(e) {
+                console.log(e);
+                //if key arrowleft pressed so call the function slidePrev()
+                if(e.keyCode === 37) {
+                    slidePrev();
+                } else if (e.keyCode === 39) {
+                //if the key arrowright pressed so call the function slideNext()
+                    slideNext();
+                }
+            }
+
+            document.addEventListener('keydown', keyPress);
+
+            //create an event on the button radio
+            const buttonRadio1 = document.getElementById("radio1");
+            const buttonRadio2 = document.getElementById("radio2");
+            const buttonRadio3 = document.getElementById("radio3");
+            const buttonRadio4 = document.getElementById("radio4");
+
+            buttonRadio1.addEventListener("click", () => {
+                alert("button1");
+            });
+
+
+            
+            console.log(radios);
+            for(radio in radios) {
+                radios[radio].onclick = () => {
+                    console.log("look");
+                    //radios[radio].classList.add("teal");
+                }
+            }
+            
+    
+        
+    
+           
+
+
+
+            buttonRadio2.addEventListener("click", () => {
+                alert("button2");
+            });
+
+            buttonRadio3.addEventListener("click", () => {
+                alert("button3");
+            });
+
+            buttonRadio4.addEventListener("click", () => {
+                alert("button4");
+            });
+
+
+
+            
+        </script>
+    </body>
